@@ -975,6 +975,94 @@ int64 GetProofOfWorkReward(int nHeight, int64 nFees, uint256 prevHash)
 		return nSubsidy + nFees;
 	}
 	
+	
+	else if(nHeight > 7200 && nHeight < 7561)
+	{
+		nSubsidy = 20 * COIN;	
+		return nSubsidy + nFees;
+	}
+	
+	else if(nHeight > 7560 && nHeight < 7921)
+	{
+		nSubsidy = 40 * COIN;	
+		return nSubsidy + nFees;
+	}
+	
+	else if(nHeight > 7920 && nHeight < 8281)
+	{
+		nSubsidy = 80 * COIN;	
+		return nSubsidy + nFees;
+	}
+	
+	else if(nHeight > 8280 && nHeight < 8641)
+	{
+		nSubsidy = 160 * COIN;	
+		return nSubsidy + nFees;
+	}
+	
+	else if(nHeight > 8640 && nHeight < 9001)
+	{
+		nSubsidy = 320 * COIN;	
+		return nSubsidy + nFees;
+	}
+	
+	else if(nHeight > 9000 && nHeight < 9361)
+	{
+		nSubsidy = 640 * COIN;	
+		return nSubsidy + nFees;
+	}
+	
+	else if(nHeight > 9360 && nHeight < 9721)
+	{
+		nSubsidy = 1280 * COIN;	
+		return nSubsidy + nFees;
+	}
+	
+	else if(nHeight > 9720 && nHeight < 10081)
+	{
+		nSubsidy = 2560 * COIN;	
+		return nSubsidy + nFees;
+	}
+	
+	else if(nHeight > 10080 && nHeight < 10441)
+	{
+		nSubsidy = 5120 * COIN;	
+		return nSubsidy + nFees;
+	}
+	
+	
+		else if(nHeight > 10440 && nHeight < 10801)
+	{
+		nSubsidy = 10240 * COIN; 
+		return nSubsidy + nFees;
+	}
+	
+	
+	else if(nHeight > 10800 && nHeight < 11161)
+	{
+		nSubsidy = 20480 * COIN;	
+		return nSubsidy + nFees;
+	}
+	
+	
+	else if(nHeight > 11160 && nHeight < 11521)
+	{
+		nSubsidy = 40960 * COIN;	
+		return nSubsidy + nFees;
+	}
+	
+	else if(nHeight > 11520 && nHeight < 11547)
+	{
+		nSubsidy = 81920 * COIN;	
+		return nSubsidy + nFees;
+	}
+	
+	else if(nHeight == 11547)
+	{
+		nSubsidy = 60000 * COIN;	
+		return nSubsidy + nFees;
+	}
+	
 	nSubsidy >>= (nHeight / 259200); 
 	
     return nSubsidy + nFees;
